@@ -30,7 +30,7 @@ function App() {
   },
   {
     day: "sun",
-    amount: 75.48
+    amount: 25.48
   }
 ];
 let highest = 0

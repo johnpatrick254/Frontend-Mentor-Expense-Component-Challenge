@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+
+
+  /* Colours */
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+p,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  place-items: center;
+  max-width: 1280px;
+  min-height: 100vh;
+  font-size: 1.125rem;
+  font-weight: 400;
+  background-color: var(--very-pale-orange);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.chart-container {
+  height: 30rem;
+  width: 27rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.chart-header {
+  height: 8%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-radius: 1rem;
+  align-items: center;
+  padding: 7%;
+  background-color: var(--Soft-red);
+}
+
+.chart-header-text {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0;
+  height: fit-content;
+  color: white;
+  font-size: 16px;
+}
+
+.chart-content {
+  height: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: space-between; */
+  gap: 0.5rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: 4%;
+  background-color: white;
+}
+
+.chart-content-heading {
+  display: grid;
+  text-align: left;
+  width: 100%;
+}
+
+.chart-content-heading h1 {
+  place-self: start;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.chart-content-bars {
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: space-between; */
+  max-width: 100%;
+  height: 50%;
+  gap: 1rem;
+  padding: 2%;
+  overflow: hidden;
+
+}
+
+.chart-content-bar-day {
+  display: flex;
+  flex-flow: column nowrap;
+  /* grid-template-areas: 
+  "amount"
+  "graph";
+  */
+
+  width: 2.7rem;
+}
+
+.bar {
+  grid-area: graph;
+  height: 100%;
+  display: flex;
+  justify-self: flex-end;
+  flex-flow: column nowrap;
+  justify-content: end;
+  place-items: flex-start;
+  gap: 1%;
+  /* width: auto; */
+}
+
+.bar p {
+  grid-area: text;
+  place-self: end;
+  text-align: center;
+  width: 100%;
+  padding-top: 0.5rem;
+
+}
+
+.chart-content-bar-amount h1 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.chart-content-bar-amount {
+  visibility: hidden;
+  /* margin-bottom: 0.3rem; */
+  grid-area: amount;
+
+}
+
+.visible {
+  visibility: visible;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.692);
+  border-radius: 3px;
+  padding: 0.1rem;
+
+}
+
+.chart-content-bar-day {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.mon {
+  grid-area: bar;
+  place-self: end;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--Soft-red);
+  cursor: pointer;
+}
+
+.tue {
+  grid-area: bar;
+  place-self: end;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--Soft-red);
+  cursor: pointer;
+}
+
+.wed {
+  grid-area: bar;
+  place-self: end;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--Soft-red);
+  cursor: pointer;
+
+}
+
+.thu {
+  grid-area: bar;
+  place-self: end;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: var(--Soft-red);
+  cursor: pointer;
+
+}
+
+.fri {
+  grid-area: bar;
+  place-self: end;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--Soft-red);
+  cursor: pointer;
+
+
+}
+
+.sat {
+  grid-area: bar;
+  place-self: end;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--Soft-red);
+  cursor: pointer;
+
+
+}
+
+.sun {
+  grid-area: bar;
+  place-self: end;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: var(--Soft-red);
+  cursor: pointer;
+
+}
+
+.selected {
+  background-color: var(--Cyan);
+}
+
+.chart-content-totals {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.chart-content-totals p {
+  color: var(--dark-brown);
+}
+
+.percentage h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+hr {
+  width: 100%;
+}

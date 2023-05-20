@@ -15,7 +15,10 @@ const [visible,setVisible]=useState(false)
             setVisible(true)
           }} onMouseLeave={()=>{
             setVisible(false)
-          }} style={{height:`${(props.amount/props.highest)*100}%`}} >
+          }} style={{
+            height:`${(props.amount/props.highest)*100}%`,
+            backgroundColor:(props.amount === props.highest) ? " hsl(186, 34%, 60%)":""
+          }} >
             
           </div>
           <p>{props.day}</p>
